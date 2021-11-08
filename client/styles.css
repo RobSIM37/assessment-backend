@@ -1,0 +1,222 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+main{
+    
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+main>section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+nav, footer, form, .meter-header, .list-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav{
+    
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+nav>a, nav>div{
+    padding: 5px;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+    
+}
+
+h1{
+    font-size: 100px;
+}
+
+h2{
+    font-size: 80px;
+}
+
+h5{
+    font-size: 30px;
+}
+
+article{
+    width: 75vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+    margin: 0px;
+}
+
+p{
+    word-wrap: break-word;
+    padding: 10px;
+    font-size: 30px;
+}
+
+form{
+    justify-content: center;
+    margin: 5px;
+}
+
+input, label, .start, .goal, li{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 23px;
+}
+
+.tool-name {
+    width: 300px;
+}
+
+section>div{
+    height: 5px;
+    width: 100%;
+    background: black;
+}
+
+#meter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#meter-container, #list-container {
+    height: auto;
+}
+
+.meter, .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: black solid 1px;
+    margin: 5px;
+}
+
+.name{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.close-button {
+    width: 20px;
+    height: 20px;
+    background: red;
+    margin-right: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.bar{
+    height: 30px;
+    background: green;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.meter-text{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#accomplishments-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section>article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: unset;
+    margin-bottom: 3px;
+}
+
+.accomplishment-type, .accomplishment-name, .accomplishment-date {
+    border: black solid 1px;
+}
+
+.accomplishment-type{
+    width: 185px;
+    text-align: center;
+}
+
+.accomplishment-name {
+    width: 50%;
+}
+
+#list-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.list {
+    width: 30%;
+    height: unset;
+}
+
+.list-header{
+    justify-content: space-between;
+}
+
+.list-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.list-form>input, ul {
+    width: 95%;
+}
+
+.checked {
+    color: gray;
+    text-decoration: line-through;
+}
+
+footer{
+    justify-content: center;
+    margin: 0px;
+}
+
+footer>div{
+    margin: 1%;
+}
