@@ -650,12 +650,6 @@ module.exports = {
     },
 
     delete(type, id, obj) {
-
-        if (isNaN(parseInt(id))) {
-            id = getNumber(id);
-        } else {
-            id = parseInt(id);
-        }
         
         const index = getIndex(type, id);
         const deletedItem = dataArrays[type].splice(index,1)[0];

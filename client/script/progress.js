@@ -1,4 +1,4 @@
-const baseProgressURL = 'http://localhost:4000/api/progress';
+const baseProgressURL = 'http://localhost:4000/api/progress/';
 const completedButtonColor = '339933';
 
 function getNumber(str) {
@@ -40,14 +40,14 @@ function putCall(id, body) {
 }
 
 function deleteCall(id) {
-
-    axios.delete(`${baseProgressURL}:${id}`).then(progressResponseHandler);
+    
+    axios.delete(`${baseProgressURL}${id}`).then(progressResponseHandler);
 
 }
 
 function completeCall(id) {
 
-    axios.delete(`${baseProgressURL}/complete:${id}`).then(progressResponseHandler);
+    axios.delete(`${baseProgressURL}/complete/${id}`).then(progressResponseHandler);
 
 }
 

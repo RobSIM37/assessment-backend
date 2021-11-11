@@ -1,4 +1,4 @@
-const baseInstantURL = 'http://localhost:4000/api/instant';
+const baseInstantURL = 'http://localhost:4000/api/instant/';
 
 function getCall(type) {
 

@@ -1,4 +1,4 @@
-const baseToDoURL = 'http://localhost:4000/api/todo';
+const baseToDoURL = 'http://localhost:4000/api/todo/';
 const unfinishedButtonColor = 'ff0000';
 const finishedButtonColor = '339933';
 

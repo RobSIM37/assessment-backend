@@ -1,4 +1,4 @@
-const baseAccomplishmentsURL = 'http://localhost:4000/api/accomplishments';
+const baseAccomplishmentsURL = 'http://localhost:4000/api/accomplishments/';
 
 function getCall() {
 

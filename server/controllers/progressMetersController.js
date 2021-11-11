@@ -26,6 +26,7 @@ module.exports = {
     },
 
     editMeter: (req, res) => {
+
         const {id} = req.params;
         const {body} = req;
 
