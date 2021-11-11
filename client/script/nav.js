@@ -2,7 +2,9 @@ const baseInstantURL = 'http://localhost:4000/api/instant/';
 
 function getCall(type) {
 
-    axios.get(`${baseInstantURL}/${type}`).then(instantResponseHandler);
+    axios.get(`${baseInstantURL}/${type}`)
+    .then(instantResponseHandler)
+    .catch(err=>alert(err));
 
 }
 

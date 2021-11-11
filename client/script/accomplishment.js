@@ -2,7 +2,9 @@ const baseAccomplishmentsURL = 'http://localhost:4000/api/accomplishments/';
 
 function getCall() {
 
-    axios.get(baseAccomplishmentsURL).then(accomplishmentsResponseHandler);
+    axios.get(baseAccomplishmentsURL)
+    .then(accomplishmentsResponseHandler)
+    .catch(err=>alert(err));
 
 }
 

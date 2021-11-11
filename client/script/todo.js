@@ -10,43 +10,57 @@ const toDoResponseHandler = (res) => {
 
 function getCall() {
 
-    axios.get(baseToDoURL).then(toDoResponseHandler);
+    axios.get(baseToDoURL)
+    .then(toDoResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function postCall(body) {
 
-    axios.post(baseToDoURL, body).then(toDoResponseHandler);
+    axios.post(baseToDoURL, body)
+    .then(toDoResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function addItemCall(id, body) {
 
-    axios.post(`${baseToDoURL}/items/${id}`, body).then(toDoResponseHandler);
+    axios.post(`${baseToDoURL}/items/${id}`, body)
+    .then(toDoResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function editItemCall(id, body){
 
-    axios.put(`${baseToDoURL}/items/${id}`, body).then(toDoResponseHandler);
+    axios.put(`${baseToDoURL}/items/${id}`, body)
+    .then(toDoResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function deleteItemCall(id, body) {
 
-    axios.delete(`${baseToDoURL}/items/${id}`, body).then(toDoResponseHandler);
+    axios.delete(`${baseToDoURL}/items/${id}`, body)
+    .then(toDoResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function deleteCall(id) {
 
-    axios.delete(`${baseToDoURL}${id}`).then(toDoResponseHandler);
+    axios.delete(`${baseToDoURL}${id}`)
+    .then(toDoResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function completeCall(id) {
 
-    axios.delete(`${baseToDoURL}/complete${id}`).then(toDoResponseHandler);
+    axios.delete(`${baseToDoURL}/complete${id}`)
+    .then(toDoResponseHandler)
+    .catch(err=>alert(err));
 
 }
 

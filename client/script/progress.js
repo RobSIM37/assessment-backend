@@ -23,31 +23,41 @@ const progressResponseHandler = (res) => {
 
 function getCall() {
 
-    axios.get(baseProgressURL).then(progressResponseHandler);
+    axios.get(baseProgressURL)
+    .then(progressResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function postCall(body) {
 
-    axios.post(baseProgressURL, body).then(progressResponseHandler);
+    axios.post(baseProgressURL, body)
+    .then(progressResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function putCall(id, body) {
 
-    axios.put(`${baseProgressURL}/${id}`, body).then(progressResponseHandler);
+    axios.put(`${baseProgressURL}/${id}`, body)
+    .then(progressResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function deleteCall(id) {
-    
-    axios.delete(`${baseProgressURL}${id}`).then(progressResponseHandler);
+
+    axios.delete(`${baseProgressURL}${id}`)
+    .then(progressResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
 function completeCall(id) {
 
-    axios.delete(`${baseProgressURL}/complete/${id}`).then(progressResponseHandler);
+    axios.delete(`${baseProgressURL}/complete/${id}`)
+    .then(progressResponseHandler)
+    .catch(err=>alert(err));
 
 }
 
