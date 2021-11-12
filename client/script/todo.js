@@ -26,7 +26,7 @@ function postCall(body) {
 
 function addItemCall(id, body) {
 
-    axios.post(`${baseToDoURL}/items/${id}`, body)
+    axios.post(`${baseToDoURL}items/${id}`, body)
     .then(toDoResponseHandler)
     .catch(err=>alert(err));
 
@@ -34,7 +34,7 @@ function addItemCall(id, body) {
 
 function editItemCall(id, body){
 
-    axios.put(`${baseToDoURL}/items/${id}`, body)
+    axios.put(`${baseToDoURL}items/${id}`, body)
     .then(toDoResponseHandler)
     .catch(err=>alert(err));
 
@@ -42,7 +42,7 @@ function editItemCall(id, body){
 
 function deleteItemCall(id, body) {
 
-    axios.delete(`${baseToDoURL}/items/${id}`, body)
+    axios.delete(`${baseToDoURL}items/${id}`, body)
     .then(toDoResponseHandler)
     .catch(err=>alert(err));
 
@@ -58,7 +58,7 @@ function deleteCall(id) {
 
 function completeCall(id) {
 
-    axios.delete(`${baseToDoURL}/complete${id}`)
+    axios.delete(`${baseToDoURL}complete/${id}`)
     .then(toDoResponseHandler)
     .catch(err=>alert(err));
 

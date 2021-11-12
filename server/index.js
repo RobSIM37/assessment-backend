@@ -23,14 +23,14 @@ app.post(`${todoURL}`, toDoCtrl.postList);
 app.post(`${todoURL}items/:id`, toDoCtrl.addListItem);
 app.put(`${todoURL}items/:id`, toDoCtrl.updateListItem);
 app.delete(`${todoURL}:id`, toDoCtrl.deleteList);
-app.delete(`${todoURL}complete:id`, toDoCtrl.completeList);
+app.delete(`${todoURL}complete/:id`, toDoCtrl.completeList);
 
 // Progress Meters
 app.get(`${progURL}`, progressMeterCtrl.getAllMeters);
 app.post(`${progURL}`, progressMeterCtrl.postMeter);
 app.put(`${progURL}:id`, progressMeterCtrl.editMeter);
 app.delete(`${progURL}:id`, progressMeterCtrl.deleteMeter);
-app.delete(`${progURL}complete:id`, progressMeterCtrl.completeMeter);
+app.delete(`${progURL}complete/:id`, progressMeterCtrl.completeMeter);
 
 // Accomplishments
 app.get(`${acomURL}`, accomplishmentCtrl.getAllAccomplishments);

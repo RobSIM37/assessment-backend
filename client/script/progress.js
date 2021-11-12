@@ -39,7 +39,7 @@ function postCall(body) {
 
 function putCall(id, body) {
 
-    axios.put(`${baseProgressURL}/${id}`, body)
+    axios.put(`${baseProgressURL}${id}`, body)
     .then(progressResponseHandler)
     .catch(err=>alert(err));
 
@@ -55,7 +55,7 @@ function deleteCall(id) {
 
 function completeCall(id) {
 
-    axios.delete(`${baseProgressURL}/complete/${id}`)
+    axios.delete(`${baseProgressURL}complete/${id}`)
     .then(progressResponseHandler)
     .catch(err=>alert(err));
 
