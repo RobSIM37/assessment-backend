@@ -4,18 +4,14 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // When we want to be able to accept JSON.
 
-const instantCtrl = require('./controllers/instantController');
 const toDoCtrl = require('./controllers/toDoListsController');
 const progressMeterCtrl = require('./controllers/progressMetersController');
 const accomplishmentCtrl = require('./controllers/accomplishmentsController');
+const data = require('./controllers/dataController');
 
-const instURL = '/api/instant/';
 const todoURL = '/api/todo/';
 const progURL = '/api/progress/';
 const acomURL = '/api/accomplishments/';
-
-// Instant Pick Me Ups
-app.get(`${instURL}:type`, instantCtrl.returnInstantPickMeUp);
 
 // To Do Lists
 app.get(`${todoURL}`, toDoCtrl.getAllLists);
@@ -35,4 +31,6 @@ app.delete(`${progURL}complete/:id`, progressMeterCtrl.completeMeter);
 // Accomplishments
 app.get(`${acomURL}`, accomplishmentCtrl.getAllAccomplishments);
 
-app.listen(4000, () => console.log("Server running on 4000"));
+data.loadData();
+app.listen(4000, () => {console.log("Server running on 4000")});
+process.on("SIGINT", ()=>{data.saveData(); process.exit()});

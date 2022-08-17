@@ -29,7 +29,7 @@ module.exports = {
 
         const {id} = req.params;
         const {body} = req;
-
+        
         if (data.edit('progressMeters', id, body)) {
             res.status(200).send(data.getCompleteArray('progressMeters'));
         } else {

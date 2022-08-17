@@ -223,7 +223,7 @@ function addListToContainer(listObj) {
     
     tempSpan.innerHTML = preListHTML + listHTML + postListHTML;
     
-    const form = tempSpan.querySelector('form')
+    const form = tempSpan.querySelector('form');
     form.addEventListener('submit', newItemSubmitHandler);
 
     const listButton = tempSpan.querySelector('.list-button');
@@ -236,7 +236,7 @@ function addListToContainer(listObj) {
     }
 
     const container = document.querySelector('#list-container');
-    list = tempSpan.firstChild;
+    const list = tempSpan.firstChild;
 
     evaluateListCompletion(list);
     container.appendChild(list);
